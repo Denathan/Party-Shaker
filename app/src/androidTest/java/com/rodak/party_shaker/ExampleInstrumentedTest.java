@@ -1,4 +1,4 @@
-package com.example.rodak.party_shaker;
+package com.rodak.party_shaker;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

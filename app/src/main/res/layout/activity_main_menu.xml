@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/MatchParentOnly"
-    tools:context=".FirstLaunchActivity">
+    tools:context="com.rodak.party_shaker.FirstLaunchActivity">
 
     <ImageView
         style="@style/BackgroundImageView"

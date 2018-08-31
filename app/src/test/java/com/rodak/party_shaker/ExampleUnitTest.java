@@ -1,4 +1,4 @@
-package com.example.rodak.party_shaker;
+package com.rodak.party_shaker;
 
 import org.junit.Test;
 

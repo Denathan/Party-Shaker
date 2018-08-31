@@ -1,7 +1,8 @@
-package com.example.rodak.party_shaker;
+package com.rodak.party_shaker;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 public class MainMenuActivity extends AppCompatActivity {
 
