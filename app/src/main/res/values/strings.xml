@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Party Shaker</string>
+    <string name="get_started">Get started!</string>
+    <string name="first_launch_text_part_1">Provide at least one ingredient and find</string>
+    <string name="first_launch_text_part_2">a cocktail with which you will win a party!</string>
+    <string name="lets_start">LET’S START</string>
+    <string name="main_menu_option_1">SEARCH</string>
+    <string name="main_menu_option_2">RANDOM COCKTAIL</string>
+    <string name="main_menu_option_3">MY RECENTS</string>
+    <string name="main_menu_option_4">FAVORITES</string>
+    <string name="main_menu_option_5">LIST OF ALL</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParentOnly"
+    tools:context=".FirstLaunchActivity">
+
+    <ImageView
+        style="@style/BackgroundImageView"
+        android:src="@drawable/first_launch_background" />
+
+    <View
+        style="@style/MatchParentOnly"
+        android:background="@color/colorBackground" />
+
+    <LinearLayout style="@style/FirstLaunchLinearLayout">
+
+        <ImageView
+            style="@style/LogoImageView"
+            android:src="@drawable/logo_transparent" />
+
+        <TextView
+            style="@style/WhiteBigTextView"
+            android:text="@string/get_started" />
+
+        <TextView
+            style="@style/PinkTextView"
+            android:text="@string/first_launch_text_part_1" />
+
+        <TextView
+            style="@style/PinkTextView"
+            android:text="@string/first_launch_text_part_2" />
+
+    </LinearLayout>
+
+    <Button
+        style="@style/BigButtonWithSmallText"
+        android:text="@string/lets_start" />
+
+</RelativeLayout>

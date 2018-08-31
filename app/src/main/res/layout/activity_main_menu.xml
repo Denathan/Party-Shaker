@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParentOnly"
+    tools:context=".FirstLaunchActivity">
+
+    <ImageView
+        style="@style/BackgroundImageView"
+        android:src="@drawable/main_menu_background" />
+
+    <View
+        style="@style/MatchParentOnly"
+        android:background="@color/colorBackground" />
+
+    <LinearLayout style="@style/FirstLaunchLinearLayout">
+
+        <ImageView
+            style="@style/LogoImageView"
+            android:src="@drawable/logo_transparent" />
+
+        <TextView
+            style="@style/WhiteTextView"
+            android:text="@string/main_menu_option_1" />
+
+        <TextView
+            style="@style/WhiteTextView"
+            android:text="@string/main_menu_option_2" />
+
+        <TextView
+            style="@style/WhiteTextView"
+            android:text="@string/main_menu_option_3" />
+
+        <TextView
+            style="@style/WhiteTextView"
+            android:text="@string/main_menu_option_4" />
+
+        <TextView
+            style="@style/WhiteTextView"
+            android:text="@string/main_menu_option_5" />
+
+    </LinearLayout>
+
+</RelativeLayout>
