@@ -5,36 +5,46 @@
     tools:context="com.rodak.party_shaker.FirstLaunchActivity">
 
     <ImageView
+        android:id="@+id/backgroundImage"
         style="@style/BackgroundImageView"
         android:src="@drawable/main_menu_background" />
 
     <View
+        android:id="@+id/backgroundColor"
         style="@style/MatchParentOnly"
         android:background="@color/colorBackground" />
 
-    <LinearLayout style="@style/FirstLaunchLinearLayout">
+    <LinearLayout
+        android:id="@+id/linearContainer"
+        style="@style/FirstLaunchLinearLayout">
 
         <ImageView
+            android:id="@+id/logoImage"
             style="@style/LogoImageView"
             android:src="@drawable/logo_transparent" />
 
         <TextView
+            android:id="@+id/firstOption"
             style="@style/WhiteTextView"
             android:text="@string/main_menu_option_1" />
 
         <TextView
+            android:id="@+id/secondOption"
             style="@style/WhiteTextView"
             android:text="@string/main_menu_option_2" />
 
         <TextView
+            android:id="@+id/thirdOption"
             style="@style/WhiteTextView"
             android:text="@string/main_menu_option_3" />
 
         <TextView
+            android:id="@+id/fourthOption"
             style="@style/WhiteTextView"
             android:text="@string/main_menu_option_4" />
 
         <TextView
+            android:id="@+id/fifthOption"
             style="@style/WhiteTextView"
             android:text="@string/main_menu_option_5" />
 

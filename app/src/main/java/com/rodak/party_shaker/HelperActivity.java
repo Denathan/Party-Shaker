@@ -1,9 +1,16 @@
+/*
+ * Copyright (c) 2018.
+ * Application made by Denathan.
+ */
+
 package com.rodak.party_shaker;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
+
 
 public class HelperActivity extends Activity {
 
@@ -20,6 +27,8 @@ public class HelperActivity extends Activity {
         super.onResume();
 
         if (prefs.getBoolean("firstrun", true)) {
+
+            /*TODO change it fo true after test*/
 //            prefs.edit().putBoolean("firstrun", false).apply();
             startActivity(new Intent(HelperActivity.this, FirstLaunchActivity.class));
             finish();
