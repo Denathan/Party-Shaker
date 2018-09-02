@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -31,18 +33,20 @@ public class SearchActivity extends AppCompatActivity {
     RecyclerView foundCocktailsList;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.searchByIngredient)
+    EditText searchByIngredient;
 
     private RecyclerView.Adapter adapter;
     private List<CocktailsList> cocktailsLists;
-    private static final String URL_DATA = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin";
+    private static final String URL_DATA = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         ButterKnife.bind(this);
-        toolbar.setTitle("SEARCH");
         setSupportActionBar(toolbar);
+        toolbar.setTitle("SEARCH");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -50,17 +54,25 @@ public class SearchActivity extends AppCompatActivity {
         foundCocktailsList.setLayoutManager(new LinearLayoutManager(this));
         cocktailsLists = new ArrayList<>();
 
-        loadUrlData();
+        searchByIngredient.setOnClickListener(
+                new View.OnClickListener()
+                {
+                    public void onClick(View view)
+                    {
+                        cocktailsLists.clear();
+                        loadUrlData(searchByIngredient.getText().toString().trim());
+                    }
+                });
     }
 
-    private void loadUrlData() {
+    private void loadUrlData(String ingredient) {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
-                URL_DATA, new Response.Listener<String>() {
+                URL_DATA + ingredient, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -101,5 +113,11 @@ public class SearchActivity extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

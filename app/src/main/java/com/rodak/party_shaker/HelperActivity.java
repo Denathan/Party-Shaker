@@ -10,8 +10,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-
-
 public class HelperActivity extends Activity {
 
     SharedPreferences prefs = null;
@@ -26,10 +24,13 @@ public class HelperActivity extends Activity {
     protected void onResume() {
         super.onResume();
 
-        if (prefs.getBoolean("firstrun", true)) {
+        //Uncomment when testing
+        if (BuildConfig.DEBUG) {
+            prefs.edit().putBoolean("firstrun", false).apply();
+        }
 
-            /*TODO change it fo true after test*/
-//            prefs.edit().putBoolean("firstrun", false).apply();
+        if (prefs.getBoolean("firstrun", true)) {
+            prefs.edit().putBoolean("firstrun", false).apply();
             startActivity(new Intent(HelperActivity.this, FirstLaunchActivity.class));
             finish();
         } else {

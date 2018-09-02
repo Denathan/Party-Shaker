@@ -34,6 +34,18 @@
                 android:layout_marginTop="@dimen/dp_16"
                 android:text="Enter what you have at home or you are going to buy." />
 
+            <EditText
+                android:id="@+id/searchByIngredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:drawableLeft="@drawable/ic_search"
+                android:hint="Ingredient"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColor="#BF0060" />
+
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView

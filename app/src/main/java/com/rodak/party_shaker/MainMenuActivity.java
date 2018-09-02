@@ -45,7 +45,6 @@ public class MainMenuActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.firstOption:
                 startActivity(new Intent(MainMenuActivity.this, SearchActivity.class));
-                finish();
                 break;
             case R.id.secondOption:
                 break;
