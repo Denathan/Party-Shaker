@@ -3,8 +3,9 @@
     <color name="colorPrimary">#1B0031</color>
     <color name="colorPrimaryDark">#1B0031</color>
     <color name="colorAccent">#BF0060</color>
-    <color name="colorBackground">#cc1b0031</color>
+    <color name="colorBackground">#dc1b0031</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorPink">#BF0060</color>
     <color name="colorPurple">#5D005E</color>
+    <color name="colorHint">#8cbf0060</color>
 </resources>

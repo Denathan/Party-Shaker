@@ -24,10 +24,10 @@ public class HelperActivity extends Activity {
     protected void onResume() {
         super.onResume();
 
-        //Uncomment when testing
-        if (BuildConfig.DEBUG) {
-            prefs.edit().putBoolean("firstrun", false).apply();
-        }
+        //Main menu
+//        if (BuildConfig.DEBUG) {
+//            prefs.edit().putBoolean("firstrun", false).apply();
+//        }
 
         if (prefs.getBoolean("firstrun", true)) {
             prefs.edit().putBoolean("firstrun", false).apply();
@@ -36,6 +36,11 @@ public class HelperActivity extends Activity {
         } else {
             startActivity(new Intent(HelperActivity.this, MainMenuActivity.class));
             finish();
+            //SearchActivity
+            /*if (BuildConfig.DEBUG) {
+                startActivity(new Intent(HelperActivity.this, SearchActivity.class));
+                finish();
+            }*/
         }
     }
 }

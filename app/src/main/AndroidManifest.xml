@@ -20,7 +20,11 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".SearchActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".CocktailActivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

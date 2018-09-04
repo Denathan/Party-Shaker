@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="dp_220">220dp</dimen>
     <dimen name="dp_40">40dp</dimen>
     <dimen name="dp_24">24dp</dimen>
     <dimen name="dp_16">16dp</dimen>
@@ -7,4 +8,5 @@
     <dimen name="sp_13">13sp</dimen>
     <dimen name="sp_12">12sp</dimen>
     <dimen name="logo_height">241dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

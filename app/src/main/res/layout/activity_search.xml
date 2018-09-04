@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/backgroundImage"
         style="@style/BackgroundImageView"
-        android:src="@drawable/first_launch_background" />
+        android:src="@drawable/search_background" />
 
     <View
         android:id="@+id/backgroundColor"
@@ -44,9 +44,19 @@
                 android:hint="Ingredient"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-                android:textColor="#BF0060" />
+                android:textColor="#BF0060"
+                android:textColorHint="@color/colorHint"/>
 
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/search_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/foundCocktailsList"
